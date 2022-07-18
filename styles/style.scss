@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  div.logoBar {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    flex: 6 1 300px;
+    h1 {
+      border: 5px solid black;
+      border-left: none;
+      border-right: none;
+      font-size: 2.5rem;
+    }
+  }
+  nav {
+    flex: 1 1 250px;
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      li {
+        padding: 1rem;
+        a {
+          text-decoration: none;
+          color: black;
+          background-color: #d9d9d9;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  height: 80%;
+  min-height: 81vh;
+  width: 100%;
+  align-items: center;
+  section.mainLeft {
+    flex: 1;
+    position: relative;
+    div.navBar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1.5rem;
+      a {
+        text-decoration: none;
+        font-size: 5rem;
+        color: black;
+      }
+      &:hover {
+        transition: all 0.3s ease-in;
+        background-color: gray;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  section.mainRight {
+    flex: 1;
+    div#thumbnail {
+      width: 30vw;
+      height: 57.5vh;
+      background-size: cover;
+    }
+  }
+  section.leftAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    img {
+      border-radius: 50%;
+      width: 20vw;
+      height: 18vw;
+      margin: 2rem;
+    }
+    ul {
+      margin-left: 2.5rem;
+      display: flex;
+      list-style-type: none;
+      li {
+        i {
+          font-size: 4rem;
+          color: black;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  section.rightAbout {
+    flex: 2.5;
+    table {
+      margin-top: 1.5rem;
+      border-collapse: collapse;
+      tr {
+        border-bottom: 2px solid gray;
+        td.title {
+          font-weight: 600;
+          font-size: 1.5rem;
+          padding: 2.5rem;
+          text-align: center;
+        }
+        td.content {
+          font-size: 1.5rem;
+          text-align: start;
+        }
+        ul.skills {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  section.projectCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0rem 5rem;
+    flex-wrap: wrap;
+    .cardLeft {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 13vw;
+        height: 13vw;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      i {
+        padding-top: 1rem;
+        font-size: 3rem;
+        color: black;
+      }
+    }
+    .cardMiddle {
+      flex: 1;
+      display: flex;
+      padding-left: 10rem;
+      div.line {
+        border-left: 3px solid black;
+        height: 10rem;
+      }
+      div.timeline {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        h3.done {
+          padding-top: 7rem;
+        }
+      }
+    }
+    .cardRight {
+      min-height: 270px;
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      div.tools {
+        flex: 1;
+        img {
+          height: 3vw;
+          width: 3vw;
+        }
+      }
+      div.intro {
+        flex: 2;
+      }
+    }
+  }
+}
+
+div.pageThumbnail_project {
+  width: 30vw;
+  height: 57.5vh;
+  background-size: cover;
+  background-image: url("/sources/LiverFairy_0_FriedShrimp_0.gif");
+  animation: fadeInLeft 0.75s ease-in;
+}
+
+div.pageThumbnail_about {
+  width: 30vw;
+  height: 57.5vh;
+  background-size: cover;
+  background-image: url("/sources/thumbnail_about.png");
+  animation: fadeInLeft 0.75s ease-in;
+}
+
+footer {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0rem 2rem;
+
+  h1 {
+    font-size: 1.2rem;
+    background-color: #d9d9d9;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section.mainRight {
+    display: none;
+  }
+  footer {
+    align-items: center;
+  }
+}
